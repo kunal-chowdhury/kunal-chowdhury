@@ -1,21 +1,11 @@
-name: Update readme with blog posts
+name: Latest RSS
 on: 
   push:
-      branches: [ kunal-chowdhury-rss-to-readme ]
-  schedule:
-    - cron: '0 * * * *'
-
+    branches: [ kunal-chowdhury-rss-to-readme ]
 jobs:
   update:
     runs-on: ubuntu-latest
-    steps:
-      - uses: JasonEtco/rss-to-readme@v1
-        with:
-          feed-url: https://www.kunal-chowdhury.com/rss.xml
-          readme-section: feed
-          template: "#### [{{ title }}]({{ link }}) \n*{{ contentSnippet }}*\n\n"
-
-      - uses: JasonEtco/rss-to-readme@v1
-        with:
-          feed-url: https://www.kunal-chowdhury.com/rss.xml
-          readme-section: notes
+    steps:  
+    - uses: CodingBull-dev/newest-rss-post-action@v0.0.1
+      with:
+        rss: 'https://www.kunal-chowdhury.com/rss.xml'
