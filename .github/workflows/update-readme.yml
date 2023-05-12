@@ -11,11 +11,11 @@ jobs:
     steps:
       - uses: JasonEtco/rss-to-readme@v1
         with:
-          feed-url: https://kunal-chowdhury.com/rss.xml
+          feed-url: https://www.kunal-chowdhury.com/rss.xml
           readme-section: feed
           template: "#### [{{ title }}]({{ link }}) \n*{{ contentSnippet }}*\n\n"
 
       - uses: JasonEtco/rss-to-readme@v1
         with:
-          feed-url: https://kunal-chowdhury.com/rss.xml
+          feed-url: https://www.kunal-chowdhury.com/rss.xml
           readme-section: notes
