@@ -7,10 +7,12 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: JasonEtco/rss-to-readme@v1
+      - uses: kohrongying/readme-the-rss@v1
         with:
-          feed-url: 'https://www.kunal-chowdhury.com/feeds/posts/default'
+          feed-url: 'https://www.kunal-chowdhury.com/rss.xml'
+          count: 10
           readme-section: feed
           max: 10 # max number of items (default 5)
           template: "#### [{{ title }}]({{ link }}) \n*{{ contentSnippet }}*\n\n"
-          
+         
+         
