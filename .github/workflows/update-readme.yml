@@ -2,10 +2,15 @@ name: Latest RSS
 on: 
   push:
     branches: [ kunal-chowdhury-rss-to-readme ]
-jobs:
+    
+obs:
   update:
     runs-on: ubuntu-latest
-    steps:  
-    - uses: CodingBull-dev/newest-rss-post-action@v0.0.1
-      with:
-        rss: 'https://www.kunal-chowdhury.com/rss.xml'
+    steps:
+      - uses: JasonEtco/rss-to-readme@v1
+        with:
+          feed-url: 'https://www.kunal-chowdhury.com/rss.xml'
+          readme-section: feed
+          max: 10 # max number of items (default 5)
+          template: "#### [{{ title }}]({{ link }}) \n*{{ contentSnippet }}*\n\n"
+          
