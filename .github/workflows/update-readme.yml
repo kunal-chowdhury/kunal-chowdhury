@@ -3,7 +3,7 @@ on:
   push:
     branches: [ kunal-chowdhury-rss-to-readme ]
     
-obs:
+jobs:
   update:
     runs-on: ubuntu-latest
     steps:
