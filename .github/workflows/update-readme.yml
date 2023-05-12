@@ -1,7 +1,8 @@
 name: Update readme with blog posts
 on: 
+  push:
+      branches: [ kunal-chowdhury-rss-to-readme ]
   schedule:
-    # Once a day at 8 AM
     - cron: '0 * * * *'
 
 jobs:
